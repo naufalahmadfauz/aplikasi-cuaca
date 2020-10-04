@@ -7,6 +7,7 @@ const app = express()
 const name = {
     name: 'Naufal Ahmad Fauzan'
 }
+//xd
 //Define paths for express config
 const publicDirectoryPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
