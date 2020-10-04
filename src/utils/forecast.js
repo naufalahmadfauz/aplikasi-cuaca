@@ -7,7 +7,7 @@ const forecast = (long, lat, callback) => {
         } else if (body.error) {
             callback('Unable to find the location!')
         } else {
-            const data = `${body.daily.data[0].summary} It is currently ${body.currently.temperature} degrees out. There is a ${body.currently.precipProbability}% Chance of rain `
+            const data = `Hari ini ${body.daily.data[0].summary} Suhu Sekarang ${body.currently.temperature} Derajat Celcius. Kemungkinan Hujan ${body.currently.precipProbability}% Suhu Terendah Hari Ini ${body.daily.data[0].temperatureMin} Derajat Celcius Dan Tertinggi ${body.daily.data[0].temperatureMax} Derajat Celcius `
             callback(undefined, data)
         }
     })
