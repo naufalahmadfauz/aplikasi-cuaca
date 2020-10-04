@@ -4,9 +4,7 @@ const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 const app = express()
-const name = {
-    name: 'Naufal Ahmad Fauzan'
-}
+const port = process.env.PORT||3000
 //xd
 //Define paths for express config
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -99,8 +97,8 @@ app.get('*', ((req, res) => {
 }))
 
 
-app.listen(3000, () => {
-    console.log('Server is running')
+app.listen(port, () => {
+    console.log('Server is running on port'+port)
 })
 
 //express melihat route dari atas ke bawah,mana yang ketemu duluan
